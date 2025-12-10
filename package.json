@@ -1,6 +1,6 @@
 {
     "name": "rn-smart-image",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "A smart image loading library for React Native with caching, progressive loading, and full-screen preview capabilities.",
     "main": "lib/commonjs/index.js",
     "module": "lib/module/index.js",

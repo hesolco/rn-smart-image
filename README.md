@@ -98,5 +98,12 @@ DownloadManager.getInstance().download(
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## ☕ Support
+
+If you find this library helpful, you can buy me a coffee 😊
+
+[![](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=hesolco&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/hesolco)
+
+
 ## 📄 License
 MIT
