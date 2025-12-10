@@ -89,8 +89,7 @@ export class DownloadManager {
             }
         } catch (error) {
             if (request.attempts < MAX_RETRIES) {
-                // Retry logic: Re-add to queue essentially (or put back at start)
-                // Here we just re-push it. A better strategy might be delay.
+                // Re-queue the request if retry attempts remain
                 console.warn(`Retry ${request.attempts} for ${request.uri}`);
                 this.addToQueue(request);
             } else {

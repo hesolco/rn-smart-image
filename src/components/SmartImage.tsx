@@ -108,6 +108,18 @@ const ZoomableImage = ({ source, zoomable }: { source: any, zoomable: boolean })
 };
 
 
+/**
+ * A smart image component that handles caching, progressive loading, and full-screen preview.
+ * 
+ * @example
+ * ```tsx
+ * <SmartImage 
+ *   source={{ uri: 'https://example.com/image.jpg' }} 
+ *   style={{ width: 100, height: 100 }}
+ *   preview={true}
+ * />
+ * ```
+ */
 export const SmartImage: React.FC<SmartImageProps> = ({
     source,
     placeholder,
