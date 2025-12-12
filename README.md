@@ -14,9 +14,16 @@ A powerful, intelligent image loading library for React Native with built-in cac
 ## 📦 Installation
 
 ```bash
-npm install rn-smart-image react-native-fs @react-native-community/netinfo crypto-js @babel/runtime
+npm install rn-smart-image
 ```
-*Note: Make sure to install peer dependencies properly.*
+
+### iOS
+
+```bash
+cd ios && pod install
+```
+
+*Note: This library includes its required dependencies. React Native autolinking is used for native modules.*
 
 ## 📱 Usage
 

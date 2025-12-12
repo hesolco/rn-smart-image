@@ -4,10 +4,14 @@ const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
 const root = path.resolve(__dirname, '..');
 const pak = require('../package.json');
 
-const modules = Object.keys({
-  ...pak.peerDependencies,
-  ...pak.dependencies,
-});
+const modules = Array.from(
+  new Set(
+    Object.keys({
+      ...pak.peerDependencies,
+      ...pak.dependencies,
+    }).concat(['@babel/runtime']),
+  ),
+);
 
 const escape = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 

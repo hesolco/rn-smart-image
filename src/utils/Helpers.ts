@@ -1,5 +1,3 @@
-import CryptoJS from 'crypto-js';
-
 export const Helpers = {
     /**
      * Generates a unique cache key based on the image URI and its dimensions.
@@ -7,7 +5,15 @@ export const Helpers = {
      */
     generateKey: (uri: string, width?: number, height?: number): string => {
         const raw = `${uri}${width ? `-${width}` : ''}${height ? `-${height}` : ''}`;
-        return CryptoJS.SHA256(raw).toString(CryptoJS.enc.Hex);
+        // Simple, deterministic hash for cache keys (not cryptographic).
+        // Uses FNV-1a 32-bit and returns hex.
+        let hash = 0x811c9dc5;
+        for (let i = 0; i < raw.length; i++) {
+            hash ^= raw.charCodeAt(i);
+            hash = Math.imul(hash, 0x01000193);
+        }
+        // Convert to unsigned 32-bit hex
+        return (hash >>> 0).toString(16).padStart(8, '0');
     },
 
     /**

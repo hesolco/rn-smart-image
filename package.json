@@ -50,14 +50,11 @@
         "react-native": "*"
     },
     "dependencies": {
-        "@babel/runtime": "^7.28.4",
         "@react-native-community/netinfo": "^11.0.0",
-        "crypto-js": "^4.2.0",
         "react-native-fs": "^2.20.0"
     },
     "devDependencies": {
         "@react-native-community/eslint-config": "^3.2.0",
-        "@types/crypto-js": "^4.2.0",
         "@types/jest": "^29.5.0",
         "@types/react": "^18.2.0",
         "eslint": "^8.40.0",
